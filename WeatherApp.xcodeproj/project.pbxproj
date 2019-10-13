@@ -17,6 +17,15 @@
 		DA00DA28235247B70016838B /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA27235247B70016838B /* WeatherAppUITests.swift */; };
 		DA00DA3A235272440016838B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA39235272440016838B /* Observable.swift */; };
 		DA00DA3D235272840016838B /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA3C235272840016838B /* ObservableTests.swift */; };
+		DA00DA60235294200016838B /* ForecastServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA5F235294200016838B /* ForecastServiceTests.swift */; };
+		DA00DA62235295530016838B /* NetworkInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA61235295530016838B /* NetworkInterfaces.swift */; };
+		DA00DA64235296C20016838B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA63235296C20016838B /* Endpoint.swift */; };
+		DA00DA69235299FF0016838B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA68235299FF0016838B /* Network.swift */; };
+		DA00DA6B23529B430016838B /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA6A23529B430016838B /* NetworkConfiguration.swift */; };
+		DA00DA6D2352A4EB0016838B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA6C2352A4EB0016838B /* NetworkService.swift */; };
+		DAA91417235333EF00752E08 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA91416235333EF00752E08 /* Logger.swift */; };
+		DAA914192353426500752E08 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA914182353426500752E08 /* NetworkTests.swift */; };
+		DAA9141C23534A9900752E08 /* Network+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9141B23534A9900752E08 /* Network+Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,15 @@
 		DA00DA29235247B70016838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA00DA39235272440016838B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DA00DA3C235272840016838B /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
+		DA00DA5F235294200016838B /* ForecastServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceTests.swift; sourceTree = "<group>"; };
+		DA00DA61235295530016838B /* NetworkInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterfaces.swift; sourceTree = "<group>"; };
+		DA00DA63235296C20016838B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DA00DA68235299FF0016838B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DA00DA6A23529B430016838B /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		DA00DA6C2352A4EB0016838B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DAA91416235333EF00752E08 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DAA914182353426500752E08 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		DAA9141B23534A9900752E08 /* Network+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Alamofire.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +123,7 @@
 			children = (
 				DA00DA35235271610016838B /* Application */,
 				DA00DA4523527D9F0016838B /* Domain */,
+				DA00DA54235285260016838B /* Data */,
 				DA00DA4623527DAC0016838B /* Infrastructure */,
 				DA00DA37235272270016838B /* Core */,
 				DA00DA36235271F40016838B /* Resources */,
@@ -168,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				DA00DA39235272440016838B /* Observable.swift */,
+				DAA91416235333EF00752E08 /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -279,6 +299,7 @@
 		DA00DA54235285260016838B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DAA9141A23534A8800752E08 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -293,6 +314,11 @@
 		DA00DA5B2352923E0016838B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DA00DA61235295530016838B /* NetworkInterfaces.swift */,
+				DA00DA6A23529B430016838B /* NetworkConfiguration.swift */,
+				DA00DA63235296C20016838B /* Endpoint.swift */,
+				DA00DA68235299FF0016838B /* Network.swift */,
+				DA00DA6C2352A4EB0016838B /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -315,6 +341,16 @@
 		DA00DA5E235292E00016838B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DAA914182353426500752E08 /* NetworkTests.swift */,
+				DA00DA5F235294200016838B /* ForecastServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DAA9141A23534A8800752E08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DAA9141B23534A9900752E08 /* Network+Alamofire.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -449,10 +485,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA00DA6B23529B430016838B /* NetworkConfiguration.swift in Sources */,
 				DA00DA3A235272440016838B /* Observable.swift in Sources */,
+				DA00DA69235299FF0016838B /* Network.swift in Sources */,
 				DA00DA0A235247B60016838B /* ViewController.swift in Sources */,
+				DAA9141C23534A9900752E08 /* Network+Alamofire.swift in Sources */,
 				DA00DA06235247B60016838B /* AppDelegate.swift in Sources */,
+				DAA91417235333EF00752E08 /* Logger.swift in Sources */,
 				DA00DA08235247B60016838B /* SceneDelegate.swift in Sources */,
+				DA00DA64235296C20016838B /* Endpoint.swift in Sources */,
+				DA00DA6D2352A4EB0016838B /* NetworkService.swift in Sources */,
+				DA00DA62235295530016838B /* NetworkInterfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +504,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA00DA3D235272840016838B /* ObservableTests.swift in Sources */,
+				DA00DA60235294200016838B /* ForecastServiceTests.swift in Sources */,
+				DAA914192353426500752E08 /* NetworkTests.swift in Sources */,
 				DA00DA1D235247B70016838B /* WeatherAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
