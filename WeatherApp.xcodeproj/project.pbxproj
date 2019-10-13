@@ -99,13 +99,13 @@
 		DA00DA04235247B60016838B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA00DA05235247B60016838B /* AppDelegate.swift */,
-				DA00DA07235247B60016838B /* SceneDelegate.swift */,
+				DA00DA35235271610016838B /* Application */,
+				DA00DA4523527D9F0016838B /* Domain */,
+				DA00DA4623527DAC0016838B /* Infrastructure */,
+				DA00DA37235272270016838B /* Core */,
+				DA00DA36235271F40016838B /* Resources */,
 				DA00DA09235247B60016838B /* ViewController.swift */,
 				DA00DA0B235247B60016838B /* Main.storyboard */,
-				DA00DA0E235247B70016838B /* Assets.xcassets */,
-				DA00DA10235247B70016838B /* LaunchScreen.storyboard */,
-				DA00DA13235247B70016838B /* Info.plist */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -113,6 +113,9 @@
 		DA00DA1B235247B70016838B /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA00DA5D235292910016838B /* Infrastructure */,
+				DA00DA41235278AA0016838B /* Scenes */,
+				DA00DA3B235272760016838B /* Core */,
 				DA00DA1C235247B70016838B /* WeatherAppTests.swift */,
 				DA00DA1E235247B70016838B /* Info.plist */,
 			);
@@ -126,6 +129,188 @@
 				DA00DA29235247B70016838B /* Info.plist */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		DA00DA35235271610016838B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA05235247B60016838B /* AppDelegate.swift */,
+				DA00DA07235247B60016838B /* SceneDelegate.swift */,
+				DA00DA3F235278200016838B /* Scenes */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DA00DA36235271F40016838B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA0E235247B70016838B /* Assets.xcassets */,
+				DA00DA10235247B70016838B /* LaunchScreen.storyboard */,
+				DA00DA13235247B70016838B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA00DA37235272270016838B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA4723527DD50016838B /* Common */,
+				DA00DA382352722D0016838B /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DA00DA382352722D0016838B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DA00DA3B235272760016838B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DA00DA3F235278200016838B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA4823527DF80016838B /* Protocols */,
+				DA00DA40235278290016838B /* ForecastsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DA00DA40235278290016838B /* ForecastsScene */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA4D23527E700016838B /* List */,
+			);
+			path = ForecastsScene;
+			sourceTree = "<group>";
+		};
+		DA00DA41235278AA0016838B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA42235278B70016838B /* ForecastsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DA00DA42235278B70016838B /* ForecastsScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForecastsScene;
+			sourceTree = "<group>";
+		};
+		DA00DA4523527D9F0016838B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA53235284DC0016838B /* Entities */,
+				DA00DA522352841C0016838B /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DA00DA4623527DAC0016838B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA54235285260016838B /* Data */,
+				DA00DA592352921D0016838B /* Repositories */,
+				DA00DA5B2352923E0016838B /* Network */,
+				DA00DA5C235292470016838B /* Storage */,
+				DA00DA5723528F100016838B /* json.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		DA00DA4723527DD50016838B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DA00DA4823527DF80016838B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA00DA4D23527E700016838B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA51235282D90016838B /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		DA00DA51235282D90016838B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA00DA522352841C0016838B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DA00DA53235284DC0016838B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DA00DA54235285260016838B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DA00DA592352921D0016838B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DA00DA5B2352923E0016838B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DA00DA5C235292470016838B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		DA00DA5D235292910016838B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DA00DA5E235292E00016838B /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		DA00DA5E235292E00016838B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +384,6 @@
 					};
 					DA00DA17235247B70016838B = {
 						CreatedOnToolsVersion = 11.1;
-						TestTargetID = DA00DA01235247B60016838B;
 					};
 					DA00DA22235247B70016838B = {
 						CreatedOnToolsVersion = 11.1;
@@ -436,7 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,7 +656,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
@@ -486,7 +669,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
 			};
 			name = Debug;
 		};
@@ -494,7 +676,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
@@ -508,7 +689,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
 			};
 			name = Release;
 		};
