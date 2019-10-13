@@ -13,7 +13,7 @@ class AlamofireSession: NetworkSessionable {
   var configuration: NetworkConfigurable
 
   lazy var manager: SessionManager = {
-    let conf = URLSessionConfiguration()
+    let conf = URLSessionConfiguration.default
     conf.timeoutIntervalForRequest = configuration.timeout
     conf.timeoutIntervalForResource = configuration.timeout
     conf.httpAdditionalHeaders = configuration.headers

@@ -65,5 +65,5 @@ protocol NetworkProvider {
 
 // MARK: Networkable
 protocol Networkable {
-  init(with provider: NetworkProvider)
+  init(provider: NetworkProvider)
 }

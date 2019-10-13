@@ -82,7 +82,7 @@ class ForecastServiceTests: XCTestCase {
     let session = NetworkSessionableMock(configurable: config, data: expectedData)
     let network = Network(sessionable: session)
 
-    let sut = NetworkService(with: network)
+    let sut = NetworkService(provider: network)
 
     let expectation = self.expectation(description: "Should return correct object")
 
@@ -107,7 +107,7 @@ class ForecastServiceTests: XCTestCase {
     let session = NetworkSessionableMock(configurable: config)
     let network = Network(sessionable: session)
 
-    let sut = NetworkService(with: network)
+    let sut = NetworkService(provider: network)
 
     let expectation = self.expectation(description: "Should return correct error")
 
@@ -136,7 +136,7 @@ class ForecastServiceTests: XCTestCase {
     let session = NetworkSessionableMock(configurable: config, error: expectedError)
     let network = Network(sessionable: session)
 
-    let sut = NetworkService(with: network)
+    let sut = NetworkService(provider: network)
 
     let expectation = self.expectation(description: "Should return correct error")
 

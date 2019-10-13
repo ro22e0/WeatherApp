@@ -23,7 +23,7 @@ protocol NetworkServiceProvider: Networkable {
 class NetworkService: NetworkServiceProvider {
   private let network: NetworkProvider
 
-  required init(with provider: NetworkProvider) {
+  required init(provider: NetworkProvider) {
     network = provider
   }
 

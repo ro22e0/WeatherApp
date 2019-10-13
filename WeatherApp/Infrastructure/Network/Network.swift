@@ -10,7 +10,7 @@ import Foundation
 
 class Network: NetworkProvider {
 
-  private var session: NetworkSessionable
+  private let session: NetworkSessionable
 
   required init(sessionable: NetworkSessionable) {
     session = sessionable
@@ -24,7 +24,7 @@ class Network: NetworkProvider {
         switch response {
 
         case .success(let data):
-          Logger.info("Network Error: \(String(describing: data))")
+          Logger.info("Network Success: \(String(describing: data))")
           completion(.success(data as? Data))
 
         case .failure(let requestError):
