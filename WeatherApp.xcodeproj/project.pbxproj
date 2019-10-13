@@ -17,7 +17,6 @@
 		DA00DA28235247B70016838B /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA27235247B70016838B /* WeatherAppUITests.swift */; };
 		DA00DA3A235272440016838B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA39235272440016838B /* Observable.swift */; };
 		DA00DA3D235272840016838B /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA3C235272840016838B /* ObservableTests.swift */; };
-		DA00DA3E235277220016838B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00DA39235272440016838B /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,7 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA00DA3D235272840016838B /* ObservableTests.swift in Sources */,
-				DA00DA3E235277220016838B /* Observable.swift in Sources */,
 				DA00DA1D235247B70016838B /* WeatherAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
@@ -679,6 +678,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
 			};
 			name = Debug;
 		};
@@ -686,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWPS85FDC4;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
@@ -699,6 +700,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
 			};
 			name = Release;
 		};
