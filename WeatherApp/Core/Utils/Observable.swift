@@ -37,6 +37,9 @@ class Observable<Value>: ObservableProvider {
 
   func subscribe(on observer: AnyObject, with block: @escaping ObserverBlock<Value>) {
     observers.append((observer, block))
+    DispatchQueue.main.async {
+      block(self.value, self.value)
+    }
   }
 
   func unsubscribe(_ observer: AnyObject) {
