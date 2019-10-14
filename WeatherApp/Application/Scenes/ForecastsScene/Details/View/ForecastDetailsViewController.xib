@@ -52,7 +52,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="lai-n0-hma" firstAttribute="top" secondItem="Ydc-QU-GBt" secondAttribute="bottom" constant="20" id="05q-0F-YK5"/>
                 <constraint firstItem="I6u-uL-lS3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KmJ-wp-jvY"/>

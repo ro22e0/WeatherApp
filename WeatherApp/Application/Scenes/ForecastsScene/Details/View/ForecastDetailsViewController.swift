@@ -19,7 +19,6 @@ class ForecastDetailsViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    configure()
     bindToViewModel()
   }
 
@@ -36,10 +35,6 @@ class ForecastDetailsViewController: BaseViewController {
     viewModel.wind.subscribe(on: self) { [weak self] new, _ in
       self?.windLabel.text = new
     }
-  }
-
-  private func configure() {
-    view.backgroundColor = .white
   }
 }
 
