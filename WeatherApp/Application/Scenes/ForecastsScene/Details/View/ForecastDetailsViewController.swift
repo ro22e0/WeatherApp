@@ -18,9 +18,28 @@ class ForecastDetailsViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    print("details.viewDidLoad")
-    self.view.backgroundColor = .white
+
+    configure()
+    bindToViewModel()
+  }
+
+  private func bindToViewModel() {
+    viewModel.temperature.subscribe(on: self) { [weak self] new, _ in
+      self?.tempLabel.text = new
+    }
+    viewModel.hour.subscribe(on: self) { [weak self] new, _ in
+      self?.timeLabel.text = new
+    }
+    viewModel.humidity.subscribe(on: self) { [weak self] new, _ in
+      self?.humidityLabel.text = new
+    }
+    viewModel.wind.subscribe(on: self) { [weak self] new, _ in
+      self?.windLabel.text = new
+    }
+  }
+
+  private func configure() {
+    view.backgroundColor = .white
   }
 }
 

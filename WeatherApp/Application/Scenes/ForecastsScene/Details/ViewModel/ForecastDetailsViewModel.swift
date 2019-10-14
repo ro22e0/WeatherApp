@@ -10,7 +10,12 @@ import Foundation
 
 protocol ForecastDetailsViewModelInput {}
 
-protocol ForecastDetailsViewModelOutput {}
+protocol ForecastDetailsViewModelOutput {
+  var hour: Observable<String> { get }
+  var temperature: Observable<String> { get }
+  var humidity: Observable<String> { get }
+  var wind: Observable<String> { get }
+}
 
 typealias ForecastDetailsViewModelProtocol =
   ForecastDetailsViewModelInput & ForecastDetailsViewModelOutput
@@ -24,9 +29,16 @@ struct ForecastDetailsData {
 
 class ForecastDetailsViewModel: ViewModel, ForecastDetailsViewModelProtocol {
 
-  private let details: ForecastDetailsData
+  // MARK: - Output properties
+  var hour: Observable<String>
+  var temperature: Observable<String>
+  var humidity: Observable<String>
+  var wind: Observable<String>
 
   init(details: ForecastDetailsData) {
-    self.details = details
+    hour = Observable<String>(details.hour)
+    temperature = Observable<String>(details.temperature)
+    humidity = Observable<String>(details.humidity)
+    wind = Observable<String>(details.wind)
   }
 }
