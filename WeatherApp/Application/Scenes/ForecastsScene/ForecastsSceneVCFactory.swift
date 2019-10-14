@@ -10,5 +10,5 @@ import UIKit
 
 protocol ForecastSceneViewControllerFactory {
   func makeDaysForecastsListViewController() -> UIViewController
-  func makeForecastDetailViewController() -> UIViewController
+  func makeForecastDetailViewController(_ details: ForecastDetailsData) -> UIViewController
 }

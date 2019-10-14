@@ -10,7 +10,7 @@ import UIKit
 
 enum ForecastsListRoute: RoutableScene {
   case idle
-  case showForecastDetail
+  case showForecastDetails(ForecastDetailsData)
 }
 
 class ForecastsSceneCoordinator: Coordinator {
@@ -28,8 +28,9 @@ class ForecastsSceneCoordinator: Coordinator {
       let vc = makeDaysForecastsListViewController()
       mainController = UINavigationController(rootViewController: vc)
       
-    case .showForecastDetail:
-      break
+    case .showForecastDetails(let data):
+      let vc = makeForecastDetailViewController(data)
+      mainController?.show(vc, sender: nil)
     }
   }
 }
@@ -40,8 +41,9 @@ extension ForecastsSceneCoordinator: ForecastSceneViewControllerFactory {
       WeatherApp.shared.defaultContainer.makeForecastsListViewModel(self))
   }
 
-  func makeForecastDetailViewController() -> UIViewController {
-    return UIViewController()
+  func makeForecastDetailViewController(_ details: ForecastDetailsData) -> UIViewController {
+    return ForecastDetailsViewController.instance(with: ForecastDetailsViewModel(details: details)
+    )
   }
 }
 
