@@ -18,4 +18,3 @@ struct Endpoints {
     return GenericEndpoint(resource: "gfs/json", parameters: parameters, encoding: .url)
   }
 }
-

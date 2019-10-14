@@ -45,7 +45,7 @@ extension DataForecasts: Decodable {
     forecasts = []
     let otherValues = try decoder.container(keyedBy: UnknownCodingKey.self)
     try otherValues.allKeys.forEach { key in
-      if let date = dateFormatter.date(from: key.stringValue) {
+      if let date = key.stringValue.date(for: "yyyy-MM-dd HH:mm:ss") {
         var fc = try otherValues.decode(DataForecast.self, forKey: key)
         fc.date = date
         forecasts.append(fc)
@@ -91,4 +91,3 @@ extension DataForecast: Decodable {
     snow = try values.decodeIfPresent(String.self, forKey: .snow)
   }
 }
-
