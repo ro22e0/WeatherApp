@@ -1,5 +1,5 @@
 //
-//  ForecastsRepository.swift
+//  ForecastsRepositoryProtocols.swift
 //  WeatherApp
 //
 //  Created by Ronaël Bajazet on 13/10/2019.

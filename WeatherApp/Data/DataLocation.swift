@@ -1,5 +1,5 @@
 //
-//  UseCaseProtocol.swift
+//  DataLocation.swift
 //  WeatherApp
 //
 //  Created by Ronaël Bajazet on 13/10/2019.
@@ -8,4 +8,7 @@
 
 import Foundation
 
-protocol UseCaseProtocol {}
+struct DataLocation {
+  let lat: Double
+  let long: Double
+}

@@ -17,9 +17,9 @@ struct ForecastsRequest {
 }
 
 class DayForecastsUseCase: DayForecastsUseCaseProtocol {
-  private let repository: ForecastsRepository
+  private let repository: ForecastsRepositoryProtocol
 
-  required init(repository: ForecastsRepository) {
+  init(repository: ForecastsRepositoryProtocol) {
     self.repository = repository
   }
 

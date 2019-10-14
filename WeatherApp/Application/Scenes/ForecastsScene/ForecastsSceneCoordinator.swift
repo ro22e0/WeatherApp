@@ -10,7 +10,7 @@ import UIKit
 
 enum ForecastsListRoute: RoutableScene {
   case idle
-  case showForecastDetail(_ detail: String)
+  case showForecastDetail
 }
 
 class ForecastsSceneCoordinator: Coordinator {
@@ -23,10 +23,41 @@ class ForecastsSceneCoordinator: Coordinator {
   func route(to route: RoutableScene) {
     guard let route = route as? ForecastsListRoute else { return }
     switch route {
+
     case .idle:
-      break
-    case .showForecastDetail(_):
+      let vc = makeDaysForecastsListViewController()
+      mainController = UINavigationController(rootViewController: vc)
+      
+    case .showForecastDetail:
       break
     }
+  }
+}
+
+extension ForecastsSceneCoordinator: ForecastSceneViewControllerFactory {
+  func makeDaysForecastsListViewController() -> UIViewController {
+    DaysForecastListViewController.instance(with:
+      WeatherApp.shared.defaultContainer.makeForecastsListViewModel(self))
+  }
+
+  func makeForecastDetailViewController() -> UIViewController {
+    return UIViewController()
+  }
+}
+
+private extension WeatherApp.Container {
+  func makeForecastsListViewModel(_ coordinator: Coordinator) -> ForecastsListViewModel {
+    ForecastsListViewModel(coordinator: coordinator,
+                           forecastsUseCase: makeForecastsUseCase(),
+                           locationUseCase: makeLocationUseCase())
+  }
+
+  private func makeForecastsUseCase() -> DayForecastsUseCaseProtocol {
+    let repository = ForecastsRepository(service: dependencies.service)
+    return DayForecastsUseCase(repository: repository)
+  }
+
+  private func makeLocationUseCase() -> LocationUseCaseProtocol {
+    return LocationUseCase(worker: dependencies.locationWorker)
   }
 }
