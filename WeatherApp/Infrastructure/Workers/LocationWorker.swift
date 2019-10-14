@@ -11,37 +11,37 @@ import CoreLocation
 
 class LocationWorker: NSObject, LocationWorkerProtocol {
 
-  private let manager: CLLocationManager
+  private lazy var manager: CLLocationManager = {
+    let manager = CLLocationManager() // FIXME: Interface(DI)
+    manager.desiredAccuracy = kCLLocationAccuracyBest
+    manager.distanceFilter = 500
+    return manager
+  }()
   weak var delegate: LocationWorkerDelegate?
 
   override init() {
-    manager = CLLocationManager() // FIXME: interface
-
     super.init()
-
     manager.delegate = self
   }
 
-  private func askAuthorization() {
+  func startMonitoring() {
     manager.requestWhenInUseAuthorization()
   }
 
-  func startMonitoring() {
-    self.askAuthorization()
-    manager.startMonitoringSignificantLocationChanges()
-  }
-
   func stopMonitoring() {
-    manager.stopMonitoringSignificantLocationChanges()
+    manager.stopUpdatingLocation()
   }
 }
 
 extension LocationWorker: CLLocationManagerDelegate {
-  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    if status == .authorizedWhenInUse || status == .authorizedAlways {
-      startMonitoring()
-    }
-    else {
+  func locationManager(_ manager: CLLocationManager,
+                       didChangeAuthorization status: CLAuthorizationStatus) {
+    switch status {
+    case .authorizedAlways, .authorizedWhenInUse:
+      manager.startUpdatingLocation()
+    case .notDetermined:
+      break
+    default:
       delegate?.worker(didFailWithError: .authorizationDenied)
     }
   }

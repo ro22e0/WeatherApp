@@ -26,7 +26,7 @@ class WeatherApp {
   static let `shared` = WeatherApp()
 
   lazy var defaultContainer = { () -> WeatherApp.Container in
-    let configuration = NetworkConfiguration(baseURL: "http://www.infoclimat.fr/public-api/")
+    let configuration = NetworkConfiguration(baseURL: "https://www.infoclimat.fr/public-api/")
     let session = AlamofireSession(configurable: configuration)
     let network = Network(sessionable: session)
     let service = NetworkService(provider: network)

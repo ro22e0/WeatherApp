@@ -44,6 +44,10 @@ class Observable<Value>: ObservableProvider {
   }
 
   private func notifyAll(_ new: Value, _ old: Value) {
-    observers.forEach { $0.block(new, old) }
+    observers.forEach { ob in
+      DispatchQueue.main.async {
+        ob.block(new, old)
+      }
+    }
   }
 }
